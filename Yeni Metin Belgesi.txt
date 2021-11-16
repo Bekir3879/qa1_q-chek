@@ -1,0 +1,2322 @@
+import java.util.Scanner;
+​
+public class C12 {
+​
+	public static void main(String[] args) {
+		
+		
+		/*  Problem Tanımı
+        Bir işçinin işi bitirme süresini ve toplam işçi sayısını alarak, işin bitme süresini
+        hesaplayan kodu yazınız.
+        Örneğin, Bir işçi bir işi 10 günde yapabilmektedir.
+        Buna göre 2 işçi aynı işi kaç günde yapar?
+        Örnek Ekran Çıktısı
+         Bir işçi işi kaç günde bitirmektedir? 10
+         Toplam kaç işçi çalışacak? 2
+        İşin bitme süresi 5 gündür.*/
+    
+		
+		Scanner scan=new Scanner(System.in);
+		
+		System.out.print("Bir İşçi Bir İşi Kaç Günde Bitirmektedir:");
+		int isci=scan.nextInt();
+		
+		System.out.print("Toplam Kaç Kişi Çalışacak:");
+		int sayi=scan.nextInt();
+		
+		double gün=isci/sayi;
+		
+		System.out.println("İşin Bitme Süresi"+gün+" Gündür");
+		
+		scan.close();
+
+--------------------------------------------------------------------------------------------------
+package Örnekler;
+​
+import java.util.Scanner;
+​
+public class C11 {
+​
+	public static void main(String[] args) {
+		 /*
+        TechProEd spor salonu için kullanıcıdan isim soyisim, yaş, kilo, boy, salona devam edeceği ay süresini
+        bilgilerini alıp aylık $20 olarak toplam ücretini yazdırınız.
+         */
+		
+		Scanner scan=new Scanner(System.in);
+		
+		System.out.println("TechProEd Spor Salonu Abonelik Bilgilerinizi Doldurunuz:");
+		
+		System.out.println();
+		
+		System.out.print("Adınızı Giriniz:");
+		String Adı=scan.nextLine();
+		
+		System.out.print("Soyadınızı Giriniz:");
+		String Soyad=scan.nextLine();
+		
+		System.out.print("Yaşınızı Giriniz:");
+		int yas=scan.nextInt();
+		
+		System.out.print("Kilonuzu Giriniz:");
+		int kilo=scan.nextInt();
+		
+		System.out.print("Boyunuzu Giriniz:");
+		double boy=scan.nextDouble();
+		
+		System.out.print("Salona Kaç Ay Devam Edeceksiniz:");
+		int ay=scan.nextInt();
+		
+		int Aylık=20;
+		
+		System.out.println("Adınız:"+Adı+"\n"+"Soyadınız:"+Soyad+"\n"+"Yaşınız:"+yas+"\n"+"Kilonuz:"+kilo+"\n"+"Boyunuz:"+boy);
+		System.out.println("Salona Kaç Ay Devam Edeceksiniz:"+ay+" Ay");
+		
+		System.out.println("         ");
+		
+		int ucret=(ay)*(Aylık);
+		System.out.println("Toplam Ücretiniz:"+"$"+ucret);
+		
+		scan.close();
+
+------------------------------------------------------------------------------------------------------------------------
+import java.util.Scanner;
+​
+public class C10 {
+​
+	public static void main(String[] args) {
+		/*  Problem Tanımı
+        Kullanıcıdan a,b ve c sayılarını okuyarak aşağıdaki işlemi yapan kodu yazınız
+        a'nın karesinden b'nin karesini cikarip c nin 3 katina bolunuz 
+        Örnek Ekran Çıktısı
+        a sayısını giriniz: 5
+        b sayısını giriniz: 3
+        c sayısını giriniz: 1
+        sonuç : 5.333333333333333
+        */
+		
+		Scanner scan=new Scanner(System.in);
+		
+		System.out.print("A Sayısını Giriniz:");
+		double a=scan.nextDouble();
+		
+		System.out.print("B Sayısını Giriniz:");
+		double b=scan.nextDouble();
+		
+		System.out.print("C Sayısını Giriniz:");
+		double c=scan.nextDouble();
+		
+		double sonuc=((a*a)-(b*b))/(3*c);
+		
+		System.out.print("Sonuç:"+sonuc);
+		
+		scan.close();
+---------------------------------------------------------------------------------------------------------		
+package Örnekler;
+​
+import java.util.Scanner;
+​
+public class C09 {
+​
+	public static void main(String[] args) {
+		
+		/*
+    	 * Kullanicidan alacaginiz vize2 vize2 ve final notlarini 
+    	 * vize ortalamasinin %30'u final notunun %70 alarak gecme notunu hesaplayiniz
+    	 */
+	
+		
+		Scanner scan=new Scanner(System.in);
+		
+		System.out.println("Vize 1 Notunuz Giriniz:");
+		int vize1=scan.nextInt();
+		
+		System.out.println("Vize 2 Notunuz Giriniz:");
+		int vize2=scan.nextInt();
+		
+		System.out.println("Final Notunu Giriniz:");
+		int ffinal=scan.nextInt();
+		
+		double ortalama=(vize1*0.30+vize2*0.30+ffinal*0.70);
+		
+		System.out.println("Not Ortalamanız:"+ortalama);
+		
+		String sonuc=(ortalama>=50)?"GEÇTİNİZ":"KALDINIZ";
+	    System.out.println(sonuc);
+	    
+	    scan.close();
+--------------------------------------------------------------------------------------------------------------------------------
+package Örnekler;
+​
+import java.util.Scanner;
+​
+public class C08 {
+​
+	public static void main(String[] args) {
+		/*
+		 Kullanicidan kilosunu ve boyunu alip
+		 Vucut kitle indeksini hesaplayan bir program yaziniz.
+		 Ipucu : Vucut 
+		 Kitle Indeksi (VKI) = Vucut Agirligi(kg.) / Boy uzunlugunun karesi (m.)
+		 ORNEK:
+		 INPUT      : Kilo: 71
+		                   Boy: 1,72
+		 OUTPUT  : Vucut Kitle Indeksiniz : 23
+		 	 */
+		
+		Scanner scan=new Scanner(System.in);
+		
+		System.out.print("Kullanıcın Kilosunu Giriniz:");
+		int kilo=scan.nextInt();
+		
+		System.out.print("Kullanıcın Boyunu Giriniz:");
+		double boyu=scan.nextDouble();
+		
+		double kitleindeks=(kilo)/(boyu*boyu);
+		
+		System.out.print("Vücudun Kitle İndeksi:"+"  "+kitleindeks);
+		
+		scan.close();
+​
+	}
+​
+}
+----------------------------------------------------------------------------------------------------------------
+package Örnekler;
+​
+import java.util.Scanner;
+​
+public class C07 {
+​
+	public static void main(String[] args) {
+		 /*  Problem Tanımı
+        Mesafeyi ve hızı alıp süreyi hesaplayan bir kod yazınız.
+        Örneğin:İstanbul ile Ankara arası 400km olarak ölçülmektedir. Bu yolu ortalama
+        120 km/saat hızla giden bir araç ne kadar sürede hedefe varır?
+        Örnek Ekran Çıktısı
+        Mesafeyi giriniz: 400
+        Hızı giriniz: 100
+        Süre 4 saattir.*/
+		
+		// HIZ=YOL/ZAMAN
+		//ZAMAN=YOL/HIZ
+		
+		Scanner scan=new Scanner(System.in);
+		
+		System.out.print("Mesafeyi Giriniz:");
+		int mesafe=scan.nextInt();
+		
+		System.out.print("Hızı Giriniz:");
+		double hız=scan.nextDouble();
+		
+		double zaman=(mesafe/hız);
+		
+		System.out.println("Süre:"+zaman+"   "+"saattir");
+		
+		scan.close();
+		
+		
+		
+		
+	}
+​
+}
+---------------------------------------------------------------------------------------------------------------
+package Örnekler;
+​
+import java.util.Scanner;
+​
+public class C07 {
+​
+	public static void main(String[] args) {
+		 /*  Problem Tanımı
+        Mesafeyi ve hızı alıp süreyi hesaplayan bir kod yazınız.
+        Örneğin:İstanbul ile Ankara arası 400km olarak ölçülmektedir. Bu yolu ortalama
+        120 km/saat hızla giden bir araç ne kadar sürede hedefe varır?
+        Örnek Ekran Çıktısı
+        Mesafeyi giriniz: 400
+        Hızı giriniz: 100
+        Süre 4 saattir.*/
+		
+		// HIZ=YOL/ZAMAN
+		//ZAMAN=YOL/HIZ
+		
+		Scanner scan=new Scanner(System.in);
+		
+		System.out.print("Mesafeyi Giriniz:");
+		int mesafe=scan.nextInt();
+		
+		System.out.print("Hızı Giriniz:");
+		double hız=scan.nextDouble();
+		
+		double zaman=(mesafe/hız);
+		
+		System.out.println("Süre:"+zaman+"   "+"saattir");
+		
+		scan.close();
+		
+		
+		
+		
+	}
+​
+}
+-------------------------------------------------------------------------------------------------------------------------
+ackage Örnekler;
+​
+import java.util.Scanner;
+​
+public class C06 {
+​
+	public static void main(String[] args) {
+		/*  Problem Tanımı
+        Bir dik üçgenin iki dik kenarını alarak hipotenüsünü hesaplayan kod yazınız.
+        Örnek Ekran Çıktısı
+        birinci kenar: 12
+        ikinci kenar: 5
+        hipotenus: 13      */
+		
+	     Scanner scan=new Scanner(System.in);
+	 	
+		
+		System.out.print("Dik Üçgenin Birinci Kenarını Yazınız:");
+	    int a=scan.nextInt();
+		
+	    System.out.print("Dik Üçgenin İkinci Kenarını Yazınız:");
+	    int b=scan.nextInt();
+	    
+	    
+	    
+	    int hipotenüs=(a*a)+(b*b);
+	    System.out.println();
+	    
+	    System.out.print("Hipotenüs:" +hipotenüs);
+	    
+	    scan.close();
+		
+​
+	}
+​}
+
+------------------------------------------------------------------------------------------------------------
+package day07_IfStatements;
+import java.util.Scanner;
+public class C01_BasitIfCumleleri {
+    public static void main(String[] args) {
+        /*
+         * Soru 2) Kullanicidan gun isimlerinden birinin ilk harfini isteyin 
+         * ve o harfle baslayan gun isimlerini yazdirin 
+            Ornek:  ilkHarf=P output = “Pazar, Pazartesi veya Persembe”             
+            ilkHarf=S output = “Sali”
+         *** Buyuk kucuk harf problem olmamasi icin toUpperCase methodunu kullanin
+         */
+        
+        Scanner scan=new Scanner(System.in);
+        System.out.println("Lutfen gun isimlerinden birinin ilk harfini yaziniz");
+        // Kullanicinin girdigi verinin tamamini kucuk harf veya buyuk harf yapabiliriz
+        // scan.next() ten sonra toUpperCase yazarsak kelimeyi buyuk harfe
+        // toLowercase yazarsak kelimenin tan=mamini kucuk harfe cevirmis oluruz
+        
+        char ilkHarf=scan.next().toUpperCase().charAt(0);
+        
+        
+        if (ilkHarf=='P') {
+            System.out.println("Pazar, Pazartesi veya Persembe");
+        }
+        if (ilkHarf=='S') {
+            System.out.println("Sali");
+        }
+        if (ilkHarf=='C') {
+            System.out.println("Carsamba, Cuma veya Cumartesi");
+        }
+        
+        if (ilkHarf!='C' && ilkHarf!='P' && ilkHarf!='S') {
+            System.out.println("Gecersiz harf girdiniz .Lutfen gun isimlerinden birinin basharfini yazin");
+        }
+    }
+}
+-------------------------------------------------------------------------------------------------------
+package day07_IfStatements;
+import java.util.Scanner;
+public class C02_BasitIfCumleleri {
+    public static void main(String[] args) {
+        // Soru 1) Kullanicidan bir tamsayi isteyin ve sayinin tek veya cift oldugunu yazdirin
+        
+        Scanner scan = new Scanner(System.in);
+        System.out.println("lutfen bir tam sayi giriniz");
+        int sayi=scan.nextInt();
+        
+        if (sayi%2==0) {
+            System.out.println("girdiginiz sayi cift bir sayi");
+        }
+        
+        if (sayi%2==1) {
+            System.out.println("girdiginiz sayi tek bir sayi");
+        }
+    }
+}
+-----------------------------------------------------------------------------------------------
+package day07_IfStatements;
+import java.util.Scanner;
+public class C03_BasitifCumleleri {
+    public static void main(String[] args) {
+        /*
+         * Soru 3) Kullanicidan gun ismini alin ve 
+         * haftaici veya hafta sonu oldugunu yazdirin 
+            Ornek:      gun=Pazar output = “Hafta sonu”
+                        gun=Sali output = “Hafta ici”
+         *** String icin equals method’unu kullanin
+         */
+        
+        Scanner scan=new Scanner(System.in);
+        System.out.println("Lutfen gun ismini yaziniz");
+        String gun=scan.next().toLowerCase();
+        
+        if (gun.equals("pazar") || gun.equals("cumartesi")) {
+            System.out.println("Hafta sonu");
+        }
+        
+        if (gun.equals("pazartesi") || gun.equals("sali") || gun.equals("carsamba")
+                || gun.equals("persembe") || gun.equals("cuma")) {
+            System.out.println("Hafta ici");
+        }
+        
+        // String non-primitive oldugu icin == kullanilmaz bunun yerine equals() kullanilmalidir
+        
+        
+                
+    }
+}
+---------------------------------------------------------------------------------------------
+package day07_IfStatements;
+import java.util.Scanner;
+public class C04_BasitIfCumleleri {
+    public static void main(String[] args) {
+        
+        // Soru 4) Kullanicidan dikdortgenin kenar uzunluklarini isteyin 
+        //         ve dikdortgenin kare olup olmadigini yazdirin
+        
+        Scanner scan = new Scanner(System.in);
+        
+        System.out.println("Lutfen dikdorgenin bir kenar uzunlugunu girin");
+        
+        double kenar1=scan.nextDouble();
+        
+        System.out.println("Lutfen dikdorgenin diger kenar uzunlugunu girin");
+        
+        double kenar2=scan.nextDouble();
+        
+        
+        if (kenar1==kenar2) {
+            System.out.println("girilen dikdortgen kare");
+        }
+        
+        if (kenar1!=kenar2) {
+            System.out.println("girilen dikdortgen kare degil");
+        }
+        
+        
+    } // main method sonu
+} // class sonu
+-------------------------------------------------------------------------------------
+package day08_IfElseStatements;
+import java.util.Scanner;
+public class C02_IfElse {
+    public static void main(String[] args) {
+        // Soru 2) Kullanicidan bir karakter girmesini isteyin ve 
+        //         girilen karakterin harf olup olmadigini yazdirin
+        
+        Scanner scan=new Scanner(System.in);
+        System.out.println("Lutfen bir karekter giriniz");
+        
+        char karakter=scan.next().charAt(0);
+        
+        if ((karakter>='A' && karakter<='Z') || (karakter>='a' && karakter<='z')) {
+            
+            System.out.println("girdiginiz :" + karakter + " bir harftir");
+        } else {
+            System.out.println("girdiginiz :" + karakter + " bir harf degildir");
+        }
+    }
+}---------------------------------------------------------------------------------------
+
+package day08_IfElseStatements;
+import java.util.Scanner;
+public class C06_IfElseIf {
+    public static void main(String[] args) {
+        // Soru 7) Kullanicidan 100 uzerinden notunu isteyin. 
+        //          Not’u harf sistemine cevirip yazdirin. 
+        //          50’den kucukse “D”, 
+        //          50 ye esit ve buyuk  ve 60 dan kucuk ise “C”, 
+        //          60 a esit ve buyuk  ve 80 dan kucuk ise “B”, 
+        //          80 ve uzerinde ise “A” 
+        Scanner scan=new Scanner(System.in);
+        System.out.println("Lutfen notunuzu giriniz");
+        
+        double not=scan.nextDouble();
+        
+        if (not<0 || not >100) {
+            System.out.println("lutfen gecerli bir not yaziniz");
+        } else if(not<50){
+                System.out.println("Notunuz : D");
+        } else if(not<60){                   
+                System.out.println("Notunuz : C");
+        } else if(not<80){
+            System.out.println("Notunuz : B");
+        }else {
+            System.out.println("Notunuz : A");
+        }
+--------------------------------------------------------------------------------------
+package day08_IfElseStatements;
+import java.util.Scanner;
+public class C05_IfElseIf {
+    public static void main(String[] args) {
+        // Soru 6) Kullanicidan iki sayi isteyin, 
+        // sayilarin ikisi de pozitif ise sayilarin toplamini yazdirin, 
+        // sayilarin ikisi de negative ise sayilarin carpimini yazdirin, 
+        // sayilarin ikisi farkli isaretlere sahipse “farkli isaretlerde sayilarla islem yapamazsin” yazdirin, 
+        // sayilardan sifira esit olan varsa “sifir carpmaya gore yutan elemandir” yazdirin.
+        Scanner scan=new Scanner(System.in);
+        System.out.println("Lutfen iki sayi yazınız \nilk sayidan sonra diger sayi için enter'e basıniz");
+        
+        double sayi1=scan.nextDouble();
+        double sayi2=scan.nextDouble();
+        
+        if (sayi1>0 && sayi2>0) {
+            System.out.println("sayilarin toplami : " + (sayi1 + sayi2));
+        } else if(sayi1<0 && sayi2<0) {
+            System.out.println("sayilarin carpimi : " +sayi1 *sayi2);
+        } else if(sayi1*sayi2<0){
+            System.out.println("farkli isaretlerde sayilarla islem yapamazsin");
+        } else {
+            System.out.println("sifir carpmaya gore yutan elemandir");
+        }
+        
+        
+    }
+}
+------------------------------------------------------------------------------------
+
+package day08_IfElseStatements;
+import java.util.Scanner;
+public class C04_IfElse {
+    public static void main(String[] args) {
+        // Soru 4) Kullanicidan bir ucgenin uc kenar uzunlugunu alin 
+        //          eger uc kenar uzunlugu birbirine esit ise ekrana “Eskenar ucgen” yazdirin. 
+        //          Diger durumlarda ekrana  “Eskenar degil” yazdirin.
+        
+        Scanner scan=new Scanner(System.in);
+        System.out.println("Lutfen ücgenin kenar uzunluklarini yazınız \nilk kenarı girdikten sonra diger kenarlar için enter'e basın");
+        
+        double kenar1=scan.nextDouble();
+        double kenar2=scan.nextDouble();
+        double kenar3=scan.nextDouble();
+        
+        if (kenar1==kenar2 && kenar2==kenar3) {
+            System.out.println("Eskenar ucgen");
+        } else {
+            System.out.println("Eskenar ucgen degil");
+        }
+        
+    }
+}
+---------------------------------------------------------------------------------------------
+package day08_IfElseStatements;
+import java.util.Scanner;
+public class C08_NestedIf {
+    public static void main(String[] args) {
+        // Eger calisan kadinsa 60 yasindan buyuk oldugunda emekli olabilir, 
+        // calisan erkekse 65 yasindan buyukse emekli olabilir
+        
+        Scanner scan=new Scanner(System.in);
+        System.out.println("Lutfen cinsiyetinizi giriniz \nErkek icin E, Kadin icin K");
+        char cinsiyet=scan.next().toUpperCase().charAt(0);
+        
+        System.out.println("Lutfen yasinizi giriniz");
+        double yas=scan.nextDouble();
+        
+        if (cinsiyet=='E') {
+            
+            if (yas>=65) {
+                System.out.println("Emekli olabilirsin");
+            } else {
+                System.out.println("Emekli olamazsin");
+            }
+            
+        } else if(cinsiyet=='K'){
+            if (yas>=60) {
+                System.out.println("Emekli olabilirsin");
+            } else {
+                System.out.println("Emekli olamazsin");
+            }
+            
+        } else {
+            System.out.println("Lutfen cinsiyet icin gecerli bir harf secin");
+        }
+    }
+}
+-----------------------------------------------------------------------------------------------
+package day08_IfElseStatements;
+import java.util.Scanner;
+public class C07_IfElseIf {
+    public static void main(String[] args) {
+        // Soru 8) Kullanicidan maas icin bir teklif isteyin 
+        //      ve asagidaki degerlere gore cevap azdirin.  
+        //      Teklif 80.000’in uzerinde ise “Kabul ediyorum” , 
+        //      60 – 80.000 arasinda ise “Konusabiliriz”, 
+        //      60.000’nin altinda ise “Maalesef Kabul edemem” yazdirin 
+        
+         Scanner scan = new Scanner(System.in);
+            
+         System.out.println("Maas için bir teklif giriniz");
+         int teklif = scan.nextInt();
+         
+         if (teklif>80000) {
+            System.out.println("Kabul ediyorum");
+        } else if(teklif>60000){
+            System.out.println("Konusabiliriz");
+        } else {
+            System.out.println("Maalesef Kabul edemem");
+        }
+    }
+}
+----------------------------------------------------------------------------------
+package day09_nestedIfElse;
+import java.util.Scanner;
+public class C01_NestedIfElse {
+    public static void main(String[] args) {
+        // Soru 11) Nested If kullanarak asagidaki soruyu cozen kodu yaziniz.
+        // Kullanicidan bir sifre girmesini isteyin
+        // Eger ilk harf buyuk harf ise 
+        // “A” olup olmadigini kontrol edin. 
+        // Ilk harf A ise   “Gecerli Sifre” degilse “Gecersiz Sifre” yazdirin.
+        // Eger ilk harf kucuk harf ise “z” olup olmadigini kontrol edin. 
+        // Ilk harf z ise   “Gecerli Sifre”     degilse “Gecersiz Sifre” yazdirin.
+        
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Lutfen bir sifre giriniz");
+        char ilkKarakter=scan.next().charAt(0);
+        
+        
+        if (ilkKarakter>='A' && ilkKarakter<='Z') { // buyuk harfleri secmis olacak
+            if (ilkKarakter=='A') {
+                System.out.println("Gecerli Sifre");
+            } else {
+                System.out.println("Gecersiz Sifre");
+            }
+            
+            
+        } else if(ilkKarakter>='a' && ilkKarakter<='z'){ // kucuk harfleri secer
+            
+            if (ilkKarakter=='z') {
+                System.out.println("Gecerli Sifre");
+            } else {
+                System.out.println("Gecersiz Sifre");
+            }
+        }else { // geriye kalan tum karakterler
+            
+            System.out.println("Gecerli sifre olmasi icin harf ile baslayiniz");
+            
+        }
+        
+        
+        
+        scan.close();       
+        
+        
+    }
+}
+
+------------------------------------------------------------------------------------
+package day09_nestedIfElse;
+import java.util.Scanner;
+public class C02_NestedIfElse {
+    public static void main(String[] args) {
+        // Soru12)Kullanıcıdan 4 basamakli bir sayi girmesini isteyin. 
+        // Girdiği sayi 5’e bölünüyorsa son rakamını kontrol edin. 
+        // Son rakamı 0 ise ekrana “5’e bölünen çift sayı” yazdırın. 
+        // Son rakamı 0 değil ise “5’e bölünen tek sayı” yazdırın.     
+        // Girdiği password 5’e bölünmüyorsa ekrana “Tekrar deneyin” yazdırın.
+        
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Lutfen 4 basamakli bir sayi girin");
+        int sayi=scan.nextInt();
+            
+        if (sayi<1000 || sayi>9999) {
+            System.out.println("4 basamakli pozitif sayi girmelisiniz");
+        } else { // 4 basamakli sayilari yakalayacak
+            
+            if (sayi%5==0) { // bese tam bolunenler
+                
+                if (sayi%10==0) { // son rakam 0
+                    
+                    System.out.println("bese tam bolunen cift sayi");
+                } else { // son rakam 5
+                    System.out.println("bese tam bolunen tek sayi");
+                }       
+                
+            } else { // bese tam bolunemeyenler
+                    System.out.println("Tekrar deneyin");
+            }
+            
+        }
+    }
+}
+----------------------------------------------------------------------------------------------------------
+package day10_ternary_SwitchCase;
+public class C05_NestedTernary {
+    public static void main(String[] args) {
+        // Eğer çalışan kadınsa 60 yaşından büyük olduğunda emekli olabilir,
+        // Çalışan erkekse 65 yaşından büyükse emekli olabilir.
+        // her seferinde scanner olusturmak yerine 
+        // test datalarimizi variable olarak da olusturabiliriz
+        // ve kodn yazimi bittiginde bu test datalarini degistirerek 
+        // kodlarimizi test edebiliriz
+        
+        char cinsiyet ='E';
+        int yas=71;
+        
+        String sonuc = cinsiyet=='K' ?  (yas>=60 ? "Emekli olabilirsin":"Emekli olamazsin") :
+                                        (yas>=65 ? "Emekli olabilirsin":"Emekli olamazsin") ;
+        
+        System.out.println(sonuc);
+    }
+}
+------------------------------------------------------------------------------
+package day10_ternary_SwitchCase;
+import java.util.Scanner;
+public class C04_Ternary {
+    public static void main(String[] args) {
+        // Soru4 ) Kullanicidan bir sayi alin. Sayi pozitifse “Sayi pozitif” yazdirin,
+        // negatifse sayinin karesini yazdirin
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Lutfen bir sayi giriniz : ");
+        double sayi=scan.nextDouble();
+        
+        // sayi>0 ? System.out.println("sayi pozitif") : System.out.println(sayi*sayi);
+        // ternary de direk sonuc veya sonuc dondurecek bir islem yapabiliriz
+        
+        System.out.println(sayi>0 ? "sayi pozitif" : sayi*sayi );
+    }
+}
+Collapse
+
+
+
+
+mehmetbulutluoz  19:27
+Untitled 
+package day10_ternary_SwitchCase;
+public class C05_NestedTernary {
+    public static void main(String[] args) {
+        // Eğer çalışan kadınsa 60 yaşından büyük olduğunda emekli olabilir,
+        // Çalışan erkekse 65 yaşından büyükse emekli olabilir.
+        // her seferinde scanner olusturmak yerine 
+        // test datalarimizi variable olarak da olusturabiliriz
+        // ve kodn yazimi bittiginde bu test datalarini degistirerek 
+        // kodlarimizi test edebiliriz
+        
+        char cinsiyet ='E';
+        int yas=71;
+        
+        String sonuc = cinsiyet=='K' ?  (yas>=60 ? "Emekli olabilirsin":"Emekli olamazsin") :
+                                        (yas>=65 ? "Emekli olabilirsin":"Emekli olamazsin") ;
+        
+        System.out.println(sonuc);
+    }
+}
+---------------------------------------------------------------------------------------------------------
+package day10_ternary_SwitchCase;
+import java.util.Scanner;
+public class C04_Ternary {
+    public static void main(String[] args) {
+        // Soru4 ) Kullanicidan bir sayi alin. Sayi pozitifse “Sayi pozitif” yazdirin,
+        // negatifse sayinin karesini yazdirin
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Lutfen bir sayi giriniz : ");
+        double sayi=scan.nextDouble();
+        
+        // sayi>0 ? System.out.println("sayi pozitif") : System.out.println(sayi*sayi);
+        // ternary de direk sonuc veya sonuc dondurecek bir islem yapabiliriz
+        
+        System.out.println(sayi>0 ? "sayi pozitif" : sayi*sayi );
+    }
+}
+------------------------------------------------------------------------------------------------------------
+
+package day10_ternary_SwitchCase;
+import java.util.Scanner;
+public class C03_Ternary {
+    public static void main(String[] args) {
+        // Soru3 ) Kullanicidan bir sayi alin ve sayinin mutlak degerini yazdirin
+        
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Lutfen bir sayi giriniz : ");
+        double sayi=scan.nextDouble();
+        
+        
+        double mutlakDeger=sayi>=0 ? sayi : (-1)*sayi;
+        
+        System.out.println(mutlakDeger);
+        scan.close();
+    }
+}
+-----------------------------------------------------------------------------------------------------
+package day10_ternary_SwitchCase;
+public class C06_NestedTernary {
+    public static void main(String[] args) {
+        // Soru2 : verilen karakteri inceleyin,
+        // kucuk harf ise consola “Kucuk Harf” , 
+        // buyuk harfse consola “Buyuk Harf” 
+        // yoksa “girdiginiz karakter harf degil” yazdirin.
+        
+        char krk='&';
+        
+         // String sonuc = (krk>='a' && krk<='z') ? "Kucuk Harf" : (//sart yanlis ise sonuc);
+        String sonuc = (krk>='a' && krk<='z') ? "Kucuk Harf" : (
+                
+                        (krk>='A'&& krk<='Z') ? "Buyuk Harf" : "girilen karakter harf degil"
+                            
+                            );
+        
+        System.out.println(sonuc);
+    }
+}
+-----------------------------------------------------------------------------------------------------
+
+package _03_IfStatement_TernaryOperator;
+​
+import java.util.Scanner;
+​
+public class Q01 {
+​
+	public static void main(String[] args) {
+		/*
+		 * Kullanicidan alacaginiz iki sayiyi yine kullaniciya sectireceginiz
+		 *  dort islemden biri ile isleme koyup sonucun yazdiriniz
+		 */
+		
+		
+		Scanner scan=new Scanner(System.in);
+		
+		System.out.print("lutfen iki sayi giriniz : ");
+		double sayi1=scan.nextDouble();
+		double sayi2=scan.nextDouble();
+		
+		System.out.println("toplama icin -> 1 \ncikarma icin -> 2\ncarpma icin -> 3 \nbolme icin -> 4");
+		
+		int islem=scan.nextInt();
+		
+		if (islem==1) {
+			System.out.println("girdiginiz sayilarin toplami : "+(sayi1+sayi2));
+		}
+		else if (islem==2) {
+			System.out.println("girdiginiz sayilarin farki : "+(sayi1-sayi2));
+		}
+		else if (islem==3) {
+			System.out.println("girdiginiz sayilarin carpimi : "+(sayi1*sayi2));
+		}
+		else if (islem==4) {
+			System.out.println("girdiginiz sayilarin orani : "+(sayi1/sayi2));
+		}
+		else {
+			System.out.println("agam hatali giris yaptin !!!");
+		}
+	}
+​
+}
+---------------------------------------------------------------------------------------------------------------------
+package _03_IfStatement_TernaryOperator;
+​
+import java.util.Scanner;
+​
+public class NotHesaplama {
+    public static void main(String[] args) {
+        /*
+        1.Kullanıcıya    "Vize sınav sonucunuzu giriniz :"
+        2.vize notu double değerinde girilecek.
+​
+        3. Kullanıcıya  "Vize sınavı yüzdesini giriniz". ->> double olmalı ->> 0,40 etkiliyor   !!Yüzde kaç etkilediğini Sisteme siz giriyorsunuz.!!
+​
+        4.Kullanıcıya    "Final sınav sonucunuzu giriniz.
+​
+        5. final notu double değerinde olmalı. (örn: 65,5)
+​
+        6.Kullanıcıya    "Final sınavı yüzdesini giriniz"-->> double olmalı ->> 0,60 etkiliyor.
+​
+        7.ornek: Vize final ortalamasını bulmak için, vize nin yüzde40 ı, finalin yüzde60 ı alınmalı ve çıkan sonuçlar toplanmalıdır.
+​
+        8. Çıkan sonucu (dersin not ortalamasını)   double toplam  ' a eşitleyebilirsiniz.
+​
+        todo  :  Koşul kısmı
+ 			eğer ortalaması 90(90 dahil) 'dan büyük ise, harf notu olarak 
+ 			AA, 80(80dahil)   ile 90 arasında ise  
+ 			BA, 70(70 dahil)   ile 80 arasında ise 
+ 			BB, 60(60dahil) ile 70 arasında ise 
+ 			CB, 50(50 dahil) ile 60 arasında ise 
+ 			CC, 40(40 dahil) ile 50 arasında ise 
+ 			DC, 30(30 dahil) ile 40 arasında ise 
+ 			DD, 30 'dan düşük ise FF  gelmeli.
+ 			
+         */
+    	
+    	Scanner scan =new Scanner(System.in);
+    	
+    	System.out.print("Vize sınav sonucunuzu giriniz :");
+    	double vize= scan.nextDouble();
+    	
+    	System.out.print("Vize sınavı yüzdesini giriniz:");
+    	double vize_yuzdesi= scan.nextDouble();
+    	
+    	System.out.print("final sınav sonucunuzu giriniz :");
+    	double fnl= scan.nextDouble();
+    	
+    	System.out.print("final sınavı yüzdesini giriniz:");
+    	double fnl_yuzdesi= scan.nextDouble();
+    	
+    	double ortalama=(vize*vize_yuzdesi/100)+(fnl*fnl_yuzdesi/100) ;   	
+    	
+    	System.out.println("ortalamaniz :"+ortalama);
+    	
+    	if (ortalama>=90) {
+    		System.out.println("gecme notunuz AA");
+		}
+    	else if (ortalama>=80) {
+    		System.out.println("gecme notunuz BA");
+		}
+    	else if (ortalama>=70) {
+    		System.out.println("gecme notunuz BB");
+		}
+    	else if (ortalama>=60) {
+    		System.out.println("gecme notunuz CB");
+		}
+    	else if (ortalama>=50) {
+    		System.out.println("gecme notunuz CC");
+		}
+    	else if (ortalama>=40) {
+    		System.out.println("gecme notunuz DC");
+		}
+    	else if (ortalama>=30) {
+    		System.out.println("gecme notunuz DD");
+		}
+    	else {
+    		System.out.println("Agam niddin sen ya gecme notunuz FF");
+		}
+​
+    }
+}
+--------------------------------------------------------------------------------------------------------------
+
+package _03_IfStatement_TernaryOperator;
+​
+import java.util.Scanner;
+​
+public class Ter01 {
+​
+    public static void main(String[] args) {
+​
+        //Kullanicidan bir sayi aliniz
+        //Sayi 0 dan buyuk esit ise 10 dan kucuk olup olmadigini kontrol ediniz.
+        //10 dan kucuk ise ekrana "Rakam" yazdiriniz degilse "Pozitif Sayi" yazdiriniz.
+        //Sayi o dan kucuk ise ekrana "Negatif Sayi" yazdiriniz.
+​
+    	Scanner scan=new Scanner(System.in);
+		
+		System.out.print("lutfen  sayi giriniz : ");
+		int sayi=scan.nextInt();
+		
+		System.out.println("*****  ternary cozum ****");
+		
+		//String result=(sayi>=0)?((sayi<10)?("rakam"):("Pozitif Sayi")):("Negatif Sayi");
+		System.out.println((sayi>=0)?((sayi<10)?("rakam"):("Pozitif Sayi")):("Negatif Sayi"));
+		
+		System.out.println("*****  if cozum ****");
+		if (sayi>=0) {
+			if (sayi<10) {
+				System.out.println("rakam");
+			}else {
+				System.out.println("pozitif sayi");
+			}
+			
+		}else {System.out.println("Negatif Sayi");
+			
+		}
+		
+    }
+}
+-----------------------------------------------------------------------------------------------
+package _03_IfStatement_TernaryOperator;
+​
+import java.util.Scanner;
+​
+public class Q03 {
+​
+	public static void main(String[] args) {
+		/*
+		 *  Kullanicidan boyunu  CM  ve kilosunu kg alarak  BMI (VKE) hesaplayiniz
+		 *
+		BMI = kilo(kg) /(boy/100*boy/100)(cm)
+		BMI <=20 oldukca zayifsiniz
+		20<BMI<=25 Normal sinirlardasiniz 
+		25<BMI<=30 Sisman kategorisindesiniz
+		30<BMI ==> Obez grubundasiniz.
+		
+		 */
+		Scanner scan =new Scanner(System.in);
+		
+		System.out.print("boyunuzu giriniz ");
+		double boy=scan.nextDouble();
+		
+		System.out.print("kilonuzu giriniz ");
+		double kilo=scan.nextDouble();
+		
+		double vki=kilo/(boy/100*boy/100);
+		
+		if (vki<=20) {
+			System.out.println("oldukca zayifsiniz AGA boyle giderse zaafiyet gecirirsin");
+		}
+		else if (20<vki && vki<=25) {
+			System.out.println("Normal sinirlardasiniz  AGA fitsin maasallah");
+		}
+		else if (25<vki && vki<=30) {
+			System.out.println("Sisman kategorisindesiniz  AGA yenge saglam besliyor herhal");
+		}
+		else if (30<vki ) {
+			System.out.println("Obez grubundasiniz. AGA mezarda kurtlar beslenecek");
+		}
+    }
+​
+}
+---------------------------------------------------------------------------------------------------------------------------
+
+/YAZDIGIMIZ STRING DE KI BUYUK HARFLERI KUCUK HARF,,KUCUK HARFLERI BUYUK HARF YAPMA
+String str="MeRhaBa DuNyA";
+        String sonuc = "";
+        System.out.println(sonuc);
+        for (int i = 0; i <str.length(); i++) {
+            if(str.charAt(i)>=65 && str.charAt(i)<=90 ) {
+                sonuc+=String.valueOf(str.charAt(i)).toLowerCase();
+            }else if (str.charAt(i)>=97 && str.charAt(i)<=122) {
+                sonuc+=String.valueOf(str.charAt(i)).toUpperCase();
+            }else {
+                sonuc+=str.charAt(i);
+            }
+        }
+System.out.println(sonuc);  
+    }
+}
+-----------------------------------------------------------------------------------------------------------------------
+package day11_stringManipulations;
+public class C01_Equals {
+    public static void main(String[] args) {
+        int a= 10;
+        int b= a + 0;
+        
+        System.out.println(a==b); // true
+        
+        char ch1= 'K';
+        char ch2= 'K' + 0; 
+        
+        System.out.println(ch1==ch2); // true
+        
+        String str1= "Ali";
+        String str2= "Can";
+        String str3= "Ali Can";
+        String str4= str1 + " " + str2; 
+        
+        System.out.println(str4); // Ali Can
+        System.out.println(str3==str4); // false
+        System.out.println(str3.equals(str4));// true
+        
+        // String variable'larda == hem degere hem de referansina bakar dolayisiyla objeler farkli oldugunda 
+        // genelde false doner
+        // str1.equals(str2) ise referanslara degil SADECE DEGERE bakar,
+        // eger case sensitive olarak String degerleri ayni ise true doner
+    }
+}
+
+---------------------------------------------------------------------------------------------------
+
+package day11_stringManipulations;
+public class C03_Length {
+    public static void main(String[] args) {
+        
+        String str1= "Ali Kahyaoglu";
+        
+        System.out.println(str1.length()); // 13
+        
+        // verilen str1'in son harfini yazdirin
+        
+        System.out.println(str1.charAt(str1.length()-1)); // u
+        
+        
+        String str2="";
+        System.out.println(str2.length()); //0
+        
+        String str3=null;   // null degeri bizim bu variable'i bilerek olusturdugumuzu
+                            // ve bilerek deger atamadigimizi belirtiyor
+        // System.out.println(str3.length()); // java.lang.NullPointerException
+        
+        String str4;
+        
+        System.out.println(str3); // null
+        // System.out.println(str4); // Eger String'i olusturur ama deger atamazsak yazdirdigimizda hata aliriz
+        
+        // null pointer olusturdugumuz fakat sonra kullanacagimiz bir String'i isaretlemek icin kullanilir
+        // Bir String i yazdirdigimizda null cikiyorsa turkce olarak
+        // " Ben bu degiskeni olusturdum ama henuz deger atamadim" demek istiyor
+        
+    }
+}
+--------------------------------------------------------------------------------------------------------
+package day11_stringManipulations;
+public class C02_EqualsIgnoreCase {
+    public static void main(String[] args) {
+        // equalsIgnorecase iki Stringi karsilastirirken case sensitive olmadan kiyaslama yapar
+        
+        String str1= "ali";
+        String str2= "can";
+        String str3= "Ali Can";
+        String str4= str1 + " " + str2; 
+        
+        System.out.println(str4); // ali can
+        System.out.println(str3==str4); // False hem degerler hem de referans farkli
+        System.out.println(str3.equals(str4));// false degerler farkli
+        
+        System.out.println(str3.equalsIgnoreCase(str4)); // true icerik ayni, case sensitive degil
+    }
+}
+------------------------------------------------------------------------------------------------------
+
+package day11_stringManipulations;
+public class C04_IndexOf {
+    public static void main(String[] args) {
+        // parametre olarak girilen bir char veya string'in
+        // ilk index'ini verir
+        
+        String str= "Calisirsaniz, Java ogrenmek cok kolay";
+        
+        System.out.println(str.indexOf('s')); // 4
+        System.out.println(str.indexOf("J")); // 14
+        
+        int index=str.indexOf("r") ; // indexof() method'u bize herzaman int bir deger doner
+        
+        System.out.println(index); // 6
+        
+        System.out.println(str.indexOf('q')); // -1
+        // Bir String icinde olmayan bir karakter veya kelime ararsak java -1 sonucunu dondurur
+        
+        System.out.println(str.indexOf('A')); // -1
+        
+        System.out.println(str.indexOf("va og")); //16
+        // aradigimiz charSquence anlamli veya anlamsiz bir kelime olabilir
+        // bu durumda java aradigimiz CS'i tek bir paket gibi dusunur ve o paketin baslangic index'ini bize verir
+        
+        
+        System.out.println(str.indexOf('e', 15));// 22
+        
+        
+    }
+}
+---------------------------------------------------------------------------------------------------
+package day12;
+import java.util.Scanner;
+public class C01_IndexOf {
+    public static void main(String[] args) {
+        // Kullanicidan bir cumle ve bir harf isteyin, 
+        // harfin cumlede var olup olmadigini yazdirin
+        
+        Scanner scan=new Scanner(System.in);
+        System.out.println("Lutfen bir cumle giriniz");
+        
+        String cumle=scan.nextLine();
+        System.out.println("Lutfen varligini kontrol etmek icin bir harf giriniz");
+        
+        char krk=scan.next().charAt(0);
+        
+        int index= cumle.indexOf(krk); // girilen karakterin cumledeki index'ini verir
+        
+        if (index==(-1)) {
+            System.out.println("Girdiginiz harf verilen cumlede yok");
+        } else {
+            System.out.println("Girdiginiz harf verilen cumlede var");
+        }
+    }
+}
+----------------------------------------------------------------------------------------------
+package day12;
+import java.util.Scanner;
+public class C02_IndexOf {
+    public static void main(String[] args) {
+        // Soru 2) Kullanicidan bir cumle ve bir kelime isteyin, 
+        //      kelimenin cumledeki kullanimina bakarak asagidaki 3 cumleden uygun olani yazdirin
+        //      - Girilen kelime cumlede kullanilmamis.
+        //      - Girilen kelime cumlede 1 kere kullanilmis.
+        //      - Girilen kelime cumlede 1’den fazla kullanilmis.
+        
+        Scanner scan=new Scanner(System.in);
+        System.out.println("Lutfen bir cumle giriniz");
+        
+        String cumle=scan.nextLine();
+        System.out.println("Lutfen varligini kontrol etmek icin bir kelime giriniz");
+        
+        String kelime=scan.next();
+        
+        int index=cumle.indexOf(kelime);
+        
+        if (index<0) {
+            System.out.println("Girilen kelime cumlede kullanilmamis");
+        } else if (cumle.indexOf(kelime, index+1)==(-1)){
+            
+            System.out.println("Girilen kelime cumlede 1 kere kullanilmis.");
+            
+        }else {
+            System.out.println("Girilen kelime cumlede 1’den fazla kullanilmis.");
+        }
+        scan.close();
+    }
+}
+----------------------------------------------------------------------------------------
+package day12;
+import java.util.Scanner;
+public class C01_IndexOf {
+    public static void main(String[] args) {
+        // Kullanicidan bir cumle ve bir harf isteyin, 
+        // harfin cumlede var olup olmadigini yazdirin
+        
+        Scanner scan=new Scanner(System.in);
+        System.out.println("Lutfen bir cumle giriniz");
+        
+        String cumle=scan.nextLine();
+        System.out.println("Lutfen varligini kontrol etmek icin bir harf giriniz");
+        
+        char krk=scan.next().charAt(0);
+        
+        int index= cumle.indexOf(krk); // girilen karakterin cumledeki index'ini verir
+        
+        if (index==(-1)) {
+            System.out.println("Girdiginiz harf verilen cumlede yok");
+        } else {
+            System.out.println("Girdiginiz harf verilen cumlede var");
+        }
+    }
+}
+-------------------------------------------------------------------------------------
+package day11_stringManipulations;
+public class C04_IndexOf {
+    public static void main(String[] args) {
+        // parametre olarak girilen bir char veya string'in
+        // ilk index'ini verir
+        
+        String str= "Calisirsaniz, Java ogrenmek cok kolay";
+        
+        System.out.println(str.indexOf('s')); // 4
+        System.out.println(str.indexOf("J")); // 14
+        
+        int index=str.indexOf("r") ; // indexof() method'u bize herzaman int bir deger doner
+        
+        System.out.println(index); // 6
+        
+        System.out.println(str.indexOf('q')); // -1
+        // Bir String icinde olmayan bir karakter veya kelime ararsak java -1 sonucunu dondurur
+        
+        System.out.println(str.indexOf('A')); // -1
+        
+        System.out.println(str.indexOf("va og")); //16
+        // aradigimiz charSquence anlamli veya anlamsiz bir kelime olabilir
+        // bu durumda java aradigimiz CS'i tek bir paket gibi dusunur ve o paketin baslangic index'ini bize verir
+        
+        
+        System.out.println(str.indexOf('e', 15));// 22
+        
+        
+    }
+}
+-----------------------------------------------------------------------------------------------------------
+package day12;
+import java.util.Scanner;
+public class C03_LastIndexOf {
+    public static void main(String[] args) {
+        // Kullanicidan bir cumle ve bir harf isteyin, 
+        // harfin cumlede var olup olmadigini yazdirin
+        
+        Scanner scan=new Scanner(System.in);
+        System.out.println("Lutfen bir cumle giriniz");
+        
+        String cumle=scan.nextLine();
+        System.out.println("Lutfen varligini kontrol etmek icin bir harf giriniz");
+        
+        char krk=scan.next().charAt(0);
+        
+        int index= cumle.lastIndexOf(krk);
+        
+        if (index==(-1)) {
+            System.out.println("harf cumlede kulanilmamis");
+        } else {
+            System.out.println("harf cumlede kulanilmis");
+        }
+        
+        scan.close();
+    }
+}
+-------------------------------------------------------------------------------------------------
+package day12;
+import java.util.Scanner;
+public class C04_LastIndexOf {
+    public static void main(String[] args) {
+        // Soru 2) Kullanicidan bir cumle ve bir kelime isteyin, 
+                //      kelimenin cumledeki kullanimina bakarak asagidaki 3 cumleden uygun olani yazdirin
+                //      - Girilen kelime cumlede kullanilmamis.
+                //      - Girilen kelime cumlede 1 kere kullanilmis.
+                //      - Girilen kelime cumlede 1’den fazla kullanilmis.
+                
+                Scanner scan=new Scanner(System.in);
+                System.out.println("Lutfen bir cumle giriniz");
+                
+                String cumle=scan.nextLine();
+                System.out.println("Lutfen varligini kontrol etmek icin bir kelime giriniz");
+                
+                String kelime=scan.next();
+                
+                int ilkIndex=cumle.indexOf(kelime);
+                int sonIndex=cumle.lastIndexOf(kelime);
+                
+                if (ilkIndex==(-1)) {
+                    System.out.println("Girilen kelime cumlede kullanilmamis.");
+                } else if(ilkIndex==sonIndex){
+                    System.out.println("Girilen kelime cumlede 1 kere kullanilmis.");
+                }else {
+                    System.out.println("Girilen kelime cumlede 1’den fazla kullanilmis.");
+                }
+                scan.close();
+                
+    }
+}
+----------------------------------------------------------------------------------------------------------
+
+package day12;
+import java.util.Scanner;
+public class C06_Contains {
+    public static void main(String[] args) {
+        //  Soru 1) Kullanicidan email adresini girmesini isteyin, 
+        //         - mail @gmail.com icermiyorsa  “lutfen gmail adresi giriniz”, 
+        //         - @gmail.com ile bitiyorsa  “Email adresiniz kaydedildi “ , 
+        //         - @gmail.com ile bitmiyorsa "lutfen yazimi kontol edin" yazdirin 
+        
+        Scanner scan=new Scanner(System.in);
+        System.out.println("Lutfen gmail adresinizi giriniz");
+        
+        
+        String email=scan.next();
+        
+        int uzunluk=email.length();
+        int index=email.lastIndexOf("@gmail.com");
+        
+        if (!email.contains("@gmail.com")) {
+            
+            System.out.println("lutfen gmail adresi giriniz");
+        } else if(index==uzunluk-10){
+            System.out.println("Email adresiniz kaydedildi");
+        }else {
+            System.out.println("lutfen yazimi kontol edin");
+        }
+        
+        
+    }
+}
+----------------------------------------------------------------------------------------------
+
+ackage day11_stringManipulations;
+public class C02_EqualsIgnoreCase {
+    public static void main(String[] args) {
+        // equalsIgnorecase iki Stringi karsilastirirken case sensitive olmadan kiyaslama yapar
+        
+        String str1= "ali";
+        String str2= "can";
+        String str3= "Ali Can";
+        String str4= str1 + " " + str2; 
+        
+        System.out.println(str4); // ali can
+        System.out.println(str3==str4); // False hem degerler hem de referans farkli
+        System.out.println(str3.equals(str4));// false degerler farkli
+        
+        System.out.println(str3.equalsIgnoreCase(str4)); // true icerik ayni, case sensitive degil
+    }
+}
+-------------------------------------------------------------------------------------------------------
+      /*
+          Problem tanimi : 
+        Kullanıcıdan aracının hizini aliniz.
+        Trafik cezasinin degerini hesaplayin.
+            45 hiz sinirindadir.
+            Eger hızınız 55-74 arasinda ise:
+            Ceza 100 $'dir.
+​
+            Eger hiziniz 75 - 84 arasinda ise:
+            Ceza 150 $'dir.
+​
+            Eger hiziniz 85 -94 arasinda ise:
+            Ceza 320 $'dir.
+​
+            Eger hiziniz 94'den daha fazla ise:
+            Ceza 500 $'dir.
+​
+            ve ayrica,
+            Eger surucunun ehliyeti yoksa cezaya 200 $ eklenir.
+​
+            Orn: Hiziniz 77 iken cezaniz 150$'dir ama ehliyetiniz yoksa ceza 350 $ olur.
+​
+-----------------------------------------
+​
+            Ã–rn;
+​
+            currentSpeed(HÄ±zÄ±nÄ±z) 87
+            ve isDriverLicenceAvailable(Ehliyeti var mi?) = true;
+​
+            sonuc 320 olmalidir.
+​
+            currentSpeed(HÄ±zÄ±nÄ±z) 65
+            ve isDriverLicenceAvailable(Ehliyeti var mi?) = false;
+​
+            sonuc 300 olmalidir.
+     */
+​
+    	Scanner scan = new Scanner (System.in);
+    	System.out.println("Lutfen aracinizin hizinizi giriniz : ");
+    	double hiz=scan.nextDouble();
+    	System.out.println("Ehliyetiniz varsa 1'i yoksa 2'yi tuslayiniz ");
+    	int tus=scan.nextInt();
+    	   	
+    	 if ( tus == 1 || tus == 2) {
+    		 
+    		 if ( tus == 1) {
+    		
+    		    if (hiz == 45) {
+    			   System.out.println("HIZ SINIRINDASINIZ");
+			
+    		    } else if (hiz >= 55 || hiz < 75) {
+    		    	System.out.println("Hiziniz "+hiz+" iken Cezanız 100 $ dir ");
+			 
+    		    } else if (hiz >= 75 || hiz < 85) {
+    		    	System.out.println("Hiziniz "+hiz+" iken Cezanız 150 $ dir ");
+			
+    		    } else if (hiz >= 85 || hiz < 95) {
+    		    	System.out.println("Hiziniz "+hiz+" iken Cezanız 320 $ dir ");
+			
+    		    } else if (hiz >=95) {
+    		    	System.out.println("Hiziniz "+hiz+" iken Cezanız 500 $ dir ");}}
+    		 
+    		 else {
+    			 if (hiz == 45) {
+      			   System.out.println("HIZ SINIRINDASINIZ");
+  			
+      		    } else if (hiz >= 55 || hiz < 75) {
+      		    	System.out.println("Hiziniz "+hiz+" iken Cezanız 100 $ dir ama ehliyetiniz olmadigindan Toplam Ceza = 300 $ olur");
+  			 
+      		    } else if (hiz >= 75 || hiz < 85) {
+      		    	System.out.println("Hiziniz "+hiz+" iken Cezanız 150 $ dir ama  ehliyetiniz olmadigindan Toplam Ceza = 350 $ olur");
+  			
+      		    } else if (hiz >= 85 || hiz < 95) {
+      		    	System.out.println("Hiziniz "+hiz+" iken Cezanız 320 $ dir ama ehliyetiniz olmadigindan Toplam Ceza = 520 $ olur");
+  			
+      		    } else if (hiz >=95) {
+      		    	System.out.println("Hiziniz "+hiz+" iken Cezanız 500 $ dir ama ehliyetiniz olmadigindan Toplam Ceza = 700 $ olur");}}
+    		    		 }
+    		     	
+		 else { System.out.println("Hatali giris yaptiniz ");
+			
+		}
+
+-------------------------------------------------------------------------------------------------------------------------
+/*Kullanici tarafindan girilen bir sayinin
+		 *mutlak degerini yazdirmak icin bir program yazin.
+		 */
+​
+		Scanner scan = new Scanner (System.in);
+		System.out.println("Lutfen bir sayi giriniz : ");
+		double sayi=scan.nextDouble();
+		
+		if (sayi >= 0) {
+			System.out.println("|sayi| = "+sayi);
+			
+		} else { System.out.println("|sayi| = "+(sayi*(-1)));
+​
+		}
+		
+		
+		-------------------------------------------------------------------------------------
+
+public static void main(String[] args) {
+        // Soru 7) Kullanicidan ismini, soyismini ve kredi karti bilgisini isteyin 
+        // ve asagidaki gibi yazdirin
+        // isim-soyisim : M***** B*******
+        // kart no : **** **** **** 1234
+        
+        Scanner scan=new Scanner(System.in);
+        System.out.println("Lutfen isminizi giriniz");
+        
+        String isim=scan.next();
+        
+        System.out.println("lutfen soyisminizi giriniz");
+        String soyisim =scan.next();
+        
+        System.out.println("lutfen 16 karakterli KK numaranizi bosluk birakmadan yazin");
+        String kkNo=scan.next();
+        
+        String isimFormatli=isim.substring(0,1).toUpperCase() + isim.substring(1).replaceAll("\\w", "*");
+        String soyisimFormatli=soyisim.substring(0,1).toUpperCase()+soyisim.substring(1).replaceAll("\\w", "*");
+        String kkFormatli= "**** **** **** " + kkNo.substring(12);
+        
+        System.out.println("isim-soyisim : " + isimFormatli + " " + soyisimFormatli);
+        System.out.println("kart no : " + kkFormatli);
+    }
+}
+-----------------------------------------------------------------------------------------------------------------
+
+    public static void main(String[] args) {
+        
+        String cumle= "Java    cok         zevkli";
+        
+        cumle=cumle.replaceAll("\\s+", " ");
+        
+        System.out.println(cumle); //Java cok zevkli
+        
+        
+        
+        System.out.println(cumle.replaceAll("[a-z]", "")); //J
+        
+        System.out.println(cumle.replaceAll("\\S", "*")); // **** *** ******
+        System.out.println(cumle.replaceAll("\\s", "*")); //Java*cok*zevkli
+    }
+}
+-----------------------------------------------------------------------------------------
+public static void main(String[] args) {
+        // kullanicidan ismini ve soyismini isteyin
+        // iki farkli method olusturun methodlardan biri girilen kelimeleri 
+        //   ilk harf buyuk, digerleri kucuk olacak sekilde birlestirsin
+        // Ikinci method Isim ve soyismin ilk harfleri buyuk harf,
+        //   kalan harfler * olacak sekilde birlestirsin
+        
+        // kullaniciya isminin acik olarak yazilmasi veya gizlenmesi tercihi sorun
+        // ve programin kalan ksminda isim ve soyismi kullanicinin istedigi sekilde kullanin
+        
+        Scanner scan = new Scanner(System.in);
+        
+        System.out.println("Lutfen isim ve soyisminizi girin \nisimden sonra enter'a basin");
+        
+        String isim=scan.next();
+        String soyisim=scan.next();
+        
+        System.out.println("Isminizin acik sekilde yazilmasini istiyorsani 1 "
+                + "\nIlk harf haric gizli yazilmasini istiyorsaniz 2'e basin");
+        int tercih=scan.nextInt();
+        
+        String birlesmisIsim=null; // Emrah Saglam , E**** S*****
+    
+        if (tercih==1) {
+            birlesmisIsim= acikIsim(isim,soyisim);
+        } else if(tercih==2){
+            birlesmisIsim=isimGizle(isim,soyisim);
+        }else {
+            System.out.println("Lutfen 1 veya 2 secin");
+        }
+        
+        // Bu satirdan itibaren kullanicinin isim ve soyismi kullanici tercihine bagli olarak
+        // kaydedildi
+        
+        System.out.println("kullanicinin tercihi : " + birlesmisIsim);
+    }
+    
+    
+    
+    public static String isimGizle(String isim, String soyisim) {
+        isim=isim.substring(0, 1).toUpperCase() + isim.substring(1).replaceAll("\\w", "*");
+        soyisim=soyisim.substring(0, 1).toUpperCase() + soyisim.substring(1).replaceAll("\\w", "*");
+        
+        return isim+" "+soyisim;
+    }
+    public static String acikIsim(String isim, String soyisim) {
+        
+        isim=isim.substring(0, 1).toUpperCase() + isim.substring(1).toLowerCase();
+        soyisim=soyisim.substring(0, 1).toUpperCase() + soyisim.substring(1).toLowerCase();
+        
+        return isim+" "+soyisim;
+    }
+}
+----------------------------------------------------------------------------------------------------------
+public static void main(String[] args) {
+        /*
+         Soru 2 ) Kullaniciya kac sayi toplamak istedigini sorun. 
+         Kullanici 2,3 veya 4 degerini girerse, 
+         kullanicidan bu sayilari girmesini isteyin 
+         ve sayilarin toplamini yazdirin. 
+         Kullanici toplamak istedigi sayi adedini 4’den buyuk girerse 
+         “Cok sayi girdiniz, ben toplayamam” yazdirin.
+         */
+        
+        Scanner scan = new Scanner(System.in);
+        
+        System.out.println("Lutfen toplamak istediginiz sayi adedini 2,3 veya 4 den biri olarak secin");
+        
+        int tercih=scan.nextInt();
+        if (tercih>4) {
+            tercih=5;
+        }
+        
+        switch(tercih) {
+        
+        case 2:
+            ikiSayiTopla();
+            break;
+        case 3:
+            ucsayiTopla();
+            break;
+        case 4:
+            dortSayiTopla();
+            break;
+        case 5:
+            System.out.println("Cok sayi girdiniz, ben toplayamam");
+            break;
+        default:
+            System.out.println("gecersiz tercih");
+        }
+        
+        scan.close();   }
+    private static void dortSayiTopla() {
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Lutfen dort sayi girin \nHer sayidan sonra enter'a basin");
+        double sayi1=scan.nextDouble();
+        double sayi2=scan.nextDouble();
+        double sayi3=scan.nextDouble();
+        double sayi4=scan.nextDouble();
+        
+        System.out.println("Girdiginiz 4 sayinin toplami : " + (sayi1+sayi2+sayi3+sayi4));
+        scan.close();
+        
+    }
+    private static void ucsayiTopla() {
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Lutfen uc sayi girin \nHer sayidan sonra enter'a basin");
+        double sayi1=scan.nextDouble();
+        double sayi2=scan.nextDouble();
+        double sayi3=scan.nextDouble();
+        
+        System.out.println("Girdiginiz 3 sayinin toplami : " + (sayi1+sayi2+sayi3));
+        scan.close();
+        
+    }
+    private static void ikiSayiTopla() {
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Lutfen iki sayi girin \nHer sayidan sonra enter'a basin");
+        double sayi1=scan.nextDouble();
+        double sayi2=scan.nextDouble();
+        
+        System.out.println("Girdiginiz 2 sayinin toplami : " + (sayi1+sayi2));
+        scan.close();
+        
+    }
+}
+--------------------------------------------------------------------------------------------------
+// Java'da ayni isimde birden fazla method olur mu ?
+        // cevap : EVET
+        
+        // Ayni isimde birden fazla method olursa Java hangisini calistiracagina nasil karar verir?
+        // cevap : isim ayni olan methodlarda oncelikle parametre sayisina bakar
+        // sonra da parametre sayisi ile arguman sayisi esit olanlardan
+        // arguman data turleri ile parametre data turleri arasinda uyuma bakar
+        // tamamen uyusan varsa onu kullanir
+        // tamamen uyusan yoksa kapsayan var mi bakar ve onu kullanir
+        // birden fazla secenek oldugunda java her zaman en optimum olani tercih eder
+        topla(2,4);
+        
+    }
+    private static void topla(int sayi1, int sayi2, int sayi3, int sayi4) {
+        System.out.println("dort sayinin toplami : " + (sayi1 +sayi2+sayi3+sayi4));
+        
+    }
+    
+    private static void topla(int sayi1, int sayi2, int sayi3) {
+        System.out.println("uc sayinin toplami : " + (sayi1 +sayi2+sayi3));
+        
+    }
+    
+    private static void topla(int sayi1, double sayi2) {
+        System.out.println("iki sayinin toplami id: " + (sayi1 +sayi2));
+        
+    }
+    
+    private static void topla(int sayi1, int sayi2) {
+        System.out.println("iki sayinin toplami ii: " + (sayi1 +sayi2));
+        
+    }
+    
+    private static void topla(double sayi1, int sayi2) {
+        System.out.println("iki sayinin toplami di: " + (sayi1 +sayi2));
+        
+    }
+    private static void topla(double sayi1, double sayi2) {
+        System.out.println("iki sayinin toplami dd: " + (sayi1 +sayi2));
+        
+    }
+    
+    
+    
+}
+
+-------------------------------------------------------------
+
+    	public class A_StringMethods {
+    	    public static void main(String[] args) {
+
+
+    	        /** indexOf()
+    	         * char karakter ya da String metnin kacinci indexden basladigini veren bir method dur. Sonuc integer dir.
+    	         */ // contains den farkı indexini verir, contains ise true false
+    	        // 012345678
+    	        String text = "Good";
+    	        System.out.println("G harfinin indexi = " + text.indexOf("G")); // indexler 0 dan başlar
+    	        System.out.println("d harfinin indexi = " + text.indexOf('d')); //3
+    	        System.out.println("H harfinin indexi = " + text.indexOf("H")); // -1  : bulunamadı, yok
+    	        System.out.println("od nin indexi = " + text.indexOf("od")); // 2 : var ise ilk harfin indexini verir
+    	        int index = text.indexOf("o"); // int değişkene atanabilir. küçük o harfi
+    	        System.out.println("index = " + index); // 1 :  aynı karakterden birden fazla var ise ilkini verir.
+
+    	        String cicek = "Gunebakan";
+
+    	        int index1 = cicek.indexOf('e');
+    	        System.out.println("e harfi metinde kacinci indexte >>>>> " + index1); //3
+    	        System.out.println("----------");
+
+    	        /** lastIndexOf()
+    	         *  String içinde aranan karakter(ler)in sondan itibaren ilk indexini varır
+    	         *  indexOf un sondan olan hali fakat index numaraları değişmez.
+    	         */
+
+    	        System.out.println("sondaki n harfinin index >>>> " + cicek.lastIndexOf('n'));  //8
+    	        System.out.println("----------");
+    	        String textt = "halukbilgin";
+    	        System.out.println("En sondaki i nun indexi = " + textt.lastIndexOf("i")); //9
+    	        System.out.println("ilk baştan i nun indexi = " + textt.indexOf("i")); //6
+    	        System.out.println("----------");
+    	        /**
+    	         * charAt()
+    	         * İstenen noktadaki karakteri verir,
+    	         * karakterlerin sırası 0 dan başlar, buna index denir.
+    	         * Metin icerisinde, istenilen indexteki karaktere ulasimi saglar. Sonuc char dir.
+    	         *  0123456789012
+    	         */
+
+    	        String sehir = "istanbul";
+    	        System.out.println("metinde 5 indexteki harf >>>> " + sehir.charAt(5));  //b
+
+    	        String kelime = "Merhaba Dünya";
+
+    	        char harf = kelime.charAt(3);
+    	        System.out.println("3.harf = " + harf); // 3 -> h
+
+    	        harf = kelime.charAt(0);
+    	        System.out.println("0.harf = " + harf); // 0 -> M
+    	        System.out.println("----------");
+
+    	        /** substring()
+    	         * Metin icinde, istenilen araliktaki bir parcasina ya da butunune ulasilabilir. Sonuc ise String dir.
+    	         */
+
+    	        String ss= "Her ders Java gibi olsa";
+
+
+    	        System.out.println(ss.substring(10)); //ava gibi olsa: 10.index dahil(inclusive) sonuna kadar tum String
+    	        System.out.println(ss.substring(ss.length()-10)); // gibi olsa: son 10 harfi yazdirin
+
+    	        // ilk 10 karakteri alma
+    	        System.out.println(ss.substring(0, 10));//Her ders J: substring(0, 10) yazildiginda
+    	        // 0 inclusive, 10 exclusive
+    	        // 11.ci karakterden sonuna kadar olan Stringi yazdiralim
+    	        System.out.println(ss.substring(10));//ava gibi olsa
+
+    	        System.out.println(ss.substring(10, 10)); //"" :hiclik baslangic indexi olsun der, ama bitis indexi olmasin der, Java son soyleneni yapar
+
+    	        //System.out.println(str.substring(8, 7)); // RTE
+
+    	        System.out.println(ss.substring(22)); //a: length()-1 -> son karakter
+    	        System.out.println(ss.substring(23)); //bosluk ...length() -> bos
+    	        //System.out.println(str.substring(24)); // length()'den buyuk sayi yazarsak RTE
+
+
+    	        // ss'in ilk 10 karakteri * ile gizleyin, geriye kalanlar normal yazilsin
+
+    	        System.out.println(ss.replaceAll("\\w", "*")+ss.substring(10)); //**********ava gibi olsa
+    	        System.out.println("----------");
+
+    	        /**trim()
+    	         *Metnin basinda ve sonunda bulunan bosluklardan kurtulmayi saglar, aralardaki bosluklara dokunmaz. Sonuc String dir.
+    	         */
+
+    	        String city = "     istanbul    ";
+
+    	        System.out.println("trim kullanilmadan once >>>>>> " + city + "<<<<<"); //      istanbul
+    	        System.out.println("trim kullanildiktan sonra -->>" + city.trim()); //istanbul
+    	        System.out.println("----------");
+
+    	        /** replace()
+    	         * Metin icerisindeki karakter ya da bir parcasinin, istenilen karakter ya da metinle degistirilmesini saglar. Sonuc String'dir..
+    	         *
+    	         */
+
+    	        String ozellik = "hayalperest";
+    	        System.out.println("a harfini @ isarti ile degistir >>> " + ozellik.replace('a', '@')); //h@y@lperest
+
+    	        String kuruyemis = "yer fistigi";
+
+    	        System.out.println("bir dizi kumesini degistirme>>>> " + kuruyemis.replace("yer", "cam")); //cam fistigi
+    	        System.out.println("----------");
+
+    	        /** ReplaceFirst
+    	        * Replace ile aynı sadece ilk bulunanı değiştirir
+    	         */
+    	        String txt = "Merhaba Dunya";
+
+    	        System.out.println("orjinal hali = " + txt); //orjinal hali = Merhaba Dunya
+    	        System.out.println("butun a ların nın degistigi hali = " + txt.replace("a", "e"));
+    	        // butun a ların nın degistigi hali = Merhebe Dunye
+    	        System.out.println("ilk bulunan a nın degistigi hali = " + txt.replaceFirst("a", "e"));
+    	        // ilk bulunan a nın degistigi hali = Merheba Dunya
+    	        System.out.println("----------");
+    	        /** replaceAll()
+    	         *
+    	         */
+
+    	        String numara = "$1800 Milyon";
+
+    	        System.out.println("REPLACEaLL METODU>>>> " + numara.replaceAll("[a-zA-Z]", "")); //$1800
+    	        System.out.println("REPLACEaLL METODU>>>> " + numara.replaceAll("[0-9]", "")); //$ Milyon
+    	        System.out.println("----------");
+
+    	        /**
+    	         * contains()
+    	         * Metin icerisinde arama yapmamizi saglar.
+    	         * bir stringin içerisinde karakter(ler)in var olup olmadığını kontrol eder.
+    	         * Sonuc boolean dir.
+    	         *
+    	         * equals()
+    	         * 2 String metnin birbirine esit olup olmadigina bakar. büyük küçük harf farkı vardır. Sonuc boolean dir.
+    	         *
+    	         * equalsIgnorecase()
+    	         * equals() ile ayni islevi gorur, tek farki buyuk kucuk harfe duyarliligi yoktur. Sonuc boolean dir.
+    	         */
+    	        String str = "Merhaba";
+    	        String st = "Merhaba";
+    	        boolean birebirEsitMi = str.equals("Merhaba");
+
+    	        System.out.println("birebirEsitMi = " + birebirEsitMi); //true
+
+    	        System.out.println("birebirEsitMi = " + str.equals(st));  //true
+
+    	        System.out.println("birebirEsitMi = " + str.equals("merhaba")); //false
+
+    	        System.out.println("Eşit mi = " + str.equalsIgnoreCase("mERHaba")); // true
+    	        System.out.println("Eşit mi = " + str.equalsIgnoreCase("mERHa")); // false
+
+    	        String ad = "Bahadir";
+    	        System.out.println("birebir ayni yazildiginda >>>" + ad.equals("Bahadir"));  //true
+    	        System.out.println("harfin kucuk olmasi durumunda >>>" + ad.equalsIgnoreCase("bahadir"));  //true
+
+    	        String sahipMi = "Baha";
+
+    	        System.out.println("ad degiskeni icinde Baha yi barindiriyor mu? >>>> " + ad.contains(sahipMi)); //true
+    	        System.out.println("----------");
+
+
+    	        /**
+    	         * startsWith()
+    	         *  Metnin bas kisminin istenilen dizi ile eslesip eslesmedigini kontrol eder. Sonucu boolean dir.
+    	         *
+    	         * endsWith()
+    	         * Metnin son kisminin istenilen dizi ile eslesip eslesmedigini kontrol eder. Sonucu boolean dir.
+    	         */
+
+    	        System.out.println("metin Ba ile basliyor mu? >>>> " + ad.startsWith("Ba")); //true
+    	        System.out.println("metin -dir ile bitiyor mu? >>>> " + ad.endsWith("dir")); //true
+    	        System.out.println("----------");
+    	    /**
+    	    * StringConcat
+    	    * bir stringe diğerini ekler
+    	     * Concatenation : Java'da + islemi yapilirken eger toplanan ifadelerden biri veya
+    	     * her ikisi String ise Java toplama degil BIRLESTIRME yapar
+    	     * */
+    	     	    System.out.println( 15 + 20 + "Merhaba"); //35Merhaba
+    	     		System.out.println("Merhaba" + 15 + 20);  // Merhaba1520
+    	     		System.out.println("Merhaba" + ( 15 + 20 )); // Merhaba35
+    	      		System.out.println("Merhaba" + 15 * 20 ); // Merhaba300
+
+    	        String s = "Hi";
+    	        System.out.println(s+" " +"there!");// Hi there!
+    	        System.out.println(s + " there!"); // Hi there!
+    	        System.out.println(s.concat("there!")); // Hithere!
+    	        System.out.println(s.concat(" there!")); // Hi there!
+    	        System.out.println(s.concat(" " +"there!")); // Hi there!
+
+    	        String s2 = " everybody";
+    	        System.out.println(s.concat(s2)); // Hi everybody
+    	        System.out.println("s = " + s); // s = Hi
+
+    	        s = s.concat(s2);// yani degiskenin kendisine atama yapılırsa degeri kalici degisir.
+    	        // s= s+s2; aynı islemi yapar.
+    	        System.out.println("s = " + s); // s = Hi everybody
+    	        System.out.println("----------");
+    	        /**
+    	         * StringIsEmpty
+    	         *  String tamamen boş mu değil mi onu kontrol ediyor, sonuç true false
+    	         */
+    	        String str1 = "Hi";
+    	        System.out.println("str1 içi boş mu = " + str1.isEmpty()); //false
+
+    	        String str2 = "";
+    	        System.out.println("str2 içi boş mu = " + str2.isEmpty()); //true
+
+    	        String str3 = " ";
+    	        System.out.println("str3 içi boş mu = " + str3.isEmpty());  //false
+    	        boolean bosMu = str3.isEmpty(); // boolean değişkenine atanabilir.
+
+    	        /**
+    	         * str.toLowerCase() verilen String'in tamamini kucuk harfe cevirir
+    	         * str.toUpperCase() verilen String'in tamamini buyuk harfe cevirir
+    	         */
+
+
+    	        String str4 = "Techproeducation";
+
+    	        // buyuk harfle yazdirmak istersek
+    	        System.out.println(str4.toUpperCase()); //TECHPROEDUCATİON
+
+    	        // str4'i buyuk harfe cevirmek istersek
+
+    	        str4=str4.toUpperCase(); // bu satirdan sonra kalici olarak str BUYUK harlerden olusan bir String oldu
+
+    	        System.out.println(str4);  //TECHPROEDUCATİON
+    	        System.out.println(str4.toLowerCase()); //techproeducation
+
+    	        System.out.println(str4.toLowerCase(Locale.forLanguageTag("tr"))); //techproeducation
+    	        System.out.println("----------");
+
+    	        /**Equals() methodu ve Cift Esittir (==) Farki
+    	         */
+    	        String sA = "Haluk Bilgin";
+    	        String sB = sA + "" ; // Haluk Bilgin
+
+    	        System.out.println(sA==sB);// false
+    	        // == Stringlerin hem degerlerine hem de adreslerine bakar
+    	        // bu ornekte sA+"" yazdigimizda concatenation yapildigi icin Java yeni bir obje
+    	        // olusturur ve islemin sonucunu yeni obje'nin icine koyar.
+    	        // sA ve sB 'yi == ile karsilastirirsak degerleri ayni fakat adresleri farkli oldugu icin
+    	        // false doner
+
+
+    	        System.out.println(sA.equals(sB)); // true
+
+    	        // equals() methodu sadece String'lerin degerlerini karsilastirir
+    	        // bu ornekte sA ile sB nin degerleri AYNI oldugu icin true dondurur
+
+    	        String sC= sA;
+    	        System.out.println(sC==sA); //true
+    	        System.out.println(sA.equals(sC)); //true
+    	        System.out.println("----------");
+    	        /**
+    	         * Length()
+    	         * length() method'u girilen String'in uzunlugunu verir
+    	         * butun karakterlerin adedi (bosluklar da birer karakterdir)
+    	         */
+    	        String cumle = "Bu gün hava yagmurlu";
+    	        System.out.println("uzunluk = " + cumle.length()); //uzunluk = 20
+
+    	        String st1="";
+    	        System.out.println(st1.length()); // 0
+
+    	        String s3=null; // null hic demek
+    	        // normalde String'ler "" icine yazilir ama null icin buna gerek yoktur
+    	        // null case sensitive'dir , dolayisiyla NULL veya Null yazilmaz
+    	        // null bir deger degildir, sadece hicligi gosteren bir pointer'dir
+
+    	        System.out.println(s3); //null
+
+    	        // null deger atanan String ile String manipulation method'lari kullanilamaz !!!RTE verir
+
+    	        System.out.println(s3.length()); // RTE verir
+    	        System.out.println(s3.equals(st1)); //RTE
+    	        System.out.println(cumle.charAt(1)); // indexi 1 olan(bastan ikinci) harfi verir
+    	        System.out.println(s3.charAt(1)); // RTE
+
+    	    }
+
+
+    	}
+-------------------------------------------------------------------------------------------------------------
+public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		/*
+		Asagidaki String degiskenini kullanarak  konsolda A L i yazdiriniz.
+		String  pickName = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+		 */
+
+       String pickName = "ABCDEFGHIJKLMNOPRSTUVXWYZ";
+       char A=pickName.charAt(pickName.indexOf ("A"));//A
+       char L=pickName.charAt(pickName.indexOf ("L"));//A
+       char I=pickName.charAt(pickName.indexOf ("I"));//A
+       System.out.println("ALI:\"+A+\" \"+L+\" \"+I");
+	}
+
+	public static java.util.Locale forLanguageTag(String string) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}
+--------------------------------------------------------------------------------------------------------------------
+ // kullanicidan 2 tam sayi isteyin
+        // ilk sayidan baslayarak , ikinci sayiya kadar ucer, ucer yazdirin
+        // (ikinci sayi dahil olmak zorunda degil)
+        
+        Scanner scan = new Scanner(System.in);
+        System.out.println("lutfen aradaki sayilari ucer ucer yazdirmak icin iki tam sayi girin...");
+        int sayi1 = scan.nextInt();
+        int sayi2 = scan.nextInt();
+        
+        if (sayi1>sayi2) { // azalarak gidecek
+            for (int i = sayi1; i >=sayi2; i-=3) {
+                System.out.print(i + " ");
+            }
+            
+            
+        } else if(sayi1<sayi2){ // artarak
+            for (int i = sayi1; i <= sayi2; i+=3) {
+                System.out.print(i + " ");
+            }
+            
+        }else {
+            System.out.println("Girilen sayilar esit");
+        }
+        
+        scan.close();
+    }
+}
+---------------------------------------------------------------------------------------------
+ // Kullanicidan 10'dan kucuk pozitif bir tamsayi girmesini isteyin
+        // girdigi sayiya gore asagidaki sekli yazdirin
+        // orn : 3 girilirse
+        // 1
+        // 1 2
+        // 1 2 3
+        Scanner scan = new Scanner(System.in);
+        System.out.println("lutfen 10'dan kucuk pozitif bir tam sayi girin...");
+        int sayi = scan.nextInt();
+        for (int satir = 1; satir <= sayi; satir++) {
+            for (int i = 1; i <= satir; i++) {
+                System.out.print(i + " ");
+            }
+            System.out.println("");
+        }
+        scan.close();
+    }
+}
+---------------------------------------------------------------------------------------------
+// Soru 2 ) For loop ve while Loop kullanarak 3 basamakli sayilardan 
+        //          15, 20 ve 90’na tam bolunebilen sayilari yazdirin. 
+        
+        
+        for (int i = 100; i < 1000; i++) {
+            
+            if (i%15==0 && i%20==0 && i%90==0) {
+                
+                System.out.println(i);
+            }
+        }
+        
+        
+        
+        int sayi=100; // baslangic degerim
+        
+        while (sayi<1000) {
+            if (sayi%15==0 && sayi%20==0 && sayi%90==0) {
+                
+                System.out.println(sayi);
+            }
+            sayi++;
+        }
+        // Eger baslangic ve bitis sarti bir sayinin artisina bagli ise veya 
+        // tekrar edilecek islem adedi belli ise for loop tercih edilir
+        // islem tekrar sayisi belli degilse veya 
+        // bitis icin bir sinir degerinden buyuk olma gibi bir sart varsa while loop tercih edilir
+    }
+}
+-----------------------------------------------------------------------------------------------------------------------------
+ // kullanicidan toplanmak uzere sayi isteyin
+        // kullanici sifira basincaya kadar sayilari alip
+        // toplamaya devap edin
+        // kullanici sifira bastiginda, 
+        // o ana kadar sifir haric kac sayi girdigini ve girilen sayilarin toplamini yazdirin
+        
+        
+        // kullanicidan 5 sayi alin dese 
+        
+        for (int i = 1; i <= 5; i++) {
+            // kullanicidan bir deger alip, toplama eklerim
+        }
+        
+        
+        Scanner scan=new Scanner(System.in);
+        // loop'un icinde kullanacagim obje ve variable'lari
+        // loop'dan once olusturmak daha guzeldir
+        // cunku loop'un icinde olusturursak, 
+        // loop her dondugunde yeni bir obje veya variable olusturur ve bu da hafizayi doldurur
+        
+        int sayi=33; // 0'in disinda ne yazarsak olur
+        int toplam=0;
+        int sayac=0;
+        
+        
+        while (sayi!=0) {
+            
+            System.out.println("Lutfen toplama eklemek icin bir tamsayi yazin \nbitirmek icin 0'a basin");
+            sayi=scan.nextInt();
+            toplam+=sayi;
+            sayac++;
+            
+        }
+        
+        // kullanici 0'a bastiginda loop islevini son kez yapip
+        // sonra basa donecek ve loop bitecek
+        // 0 toplanmak uzere verilmeyip sadece bitirmek icin verildiginden
+        // sifiri sayac'a eklememek icin 46.satirda sayac-1 yaptik
+        System.out.println("girilen sayi adedi : " + (sayac-1));
+        System.out.println("girilen sayilarin toplami : " + toplam);
+        scan.close();
+    }
+}
+-------------------------------------------------------------------------------------------------
+Scanner scan=new Scanner(System.in);
+          System.out.print("name1 giriniz : ");
+          String name1=scan.next();
+          
+          System.out.print("name2 giriniz : ");
+          String name2=scan.next();
+          
+          ortasinaEkle(name1,name2);
+}
+    private static void ortasinaEkle(String n1, String n2) {
+        
+        if (n1.length()%2==0) {
+    System.out.println(n1.substring(0, n1.length()/2)+" "+n2+" "+n1.substring(n1.length()/2));
+            
+        } else {
+System.out.println("name1 cift sayili olmadigi icin ortasina yerlestiremedik");
+        }
+        
+        
+    }
+--------------------------------------------------------------------------------------------------
+/* StringMethods
+           String girildiginde ilk iki karakteri haric string return eden java programi yaziniz
+           Ancak ilk karakter 'g' ve ikinci karakteri 'h' ise bu karakterler de return edilsin
+          ORNEK:
+           INPUT      :  goat
+                         photo
+                         ghost
+                         kalem
+           OUTPUT :      gat
+                         hoto
+                         ghost
+                         lem
+         */
+       
+        
+          Scanner scan=new Scanner(System.in);
+          
+          System.out.print("bir string giriniz : ");
+          
+          
+          String str=scan.nextLine();
+          
+         System.out.println(ilkIkisiz(str)); ;
+          
+          
+    }
+    public static String ilkIkisiz(String str) {
+        String kalanHarfler="";
+        if (str.startsWith("gh")) {
+            kalanHarfler=str;
+            
+        }else if (str.startsWith("g")) {
+            kalanHarfler=str.charAt(0)+str.substring(2);
+            
+            
+        } else if (str.charAt(1)=='h') {
+            kalanHarfler=str.substring(1);
+            
+        }else {
+            kalanHarfler=str.substring(2);
+        }
+        return kalanHarfler;
+        
+    }
+-----------------------------------------------------------------------------------------
+
+ /* StringMethods
+           String girildiginde ilk iki karakteri haric string return eden java programi yaziniz
+           Ancak ilk karakter 'g' ve ikinci karakteri 'h' ise bu karakterler de return edilsin
+          ORNEK:
+           INPUT      :  goat
+                         photo
+                         ghost
+                         kalem
+           OUTPUT :      gat
+                         hoto
+                         ghost
+                         lem
+         */
+       
+        
+          Scanner scan=new Scanner(System.in);
+          
+          System.out.print("bir string giriniz : ");
+          
+          
+          String str=scan.nextLine();
+          
+          ilkIkisiz(str);
+          
+          
+    }
+    public static void ilkIkisiz(String str) {
+        
+        if (str.startsWith("gh")) {
+            System.out.println(str);
+            
+        }else if (str.startsWith("g")) {
+            System.out.println(str.charAt(0)+str.substring(2));
+            
+        } else if (str.charAt(1)=='h') {
+            System.out.println(str.substring(1));
+            
+        }else {
+            System.out.println(str.substring(2));
+        }
+        
+        
+    }
+}
+-----------------------------------------------------------------------------------------
+// Girilen bir ay numarasına göre , ayın kaç gün olduğunu sayı ile yazdırınız
+​
+    	Scanner scan=new Scanner(System.in);
+    	System.out.print("gununu oğrenmek istediginiz ay nosunu giriniz : ");
+    	int ayNo=scan.nextInt();
+    	
+    	switch (ayNo) {
+		    case 1:
+		    case 3:
+			case 5:
+			case 7:
+			case 8:
+			case 10:
+			case 12:
+				
+				System.out.println("girdiginiz ay 31 gun");
+			
+			break;
+			
+			case 4:
+			case 6:
+			case 9:
+			case 11:
+				
+​
+					System.out.println("girdiginiz ay 30 gun");
+				
+				break;
+				case 2:
+				System.out.print("yili giriniz : ");
+				int yil=scan.nextInt();
+				if (yil%4==0) {
+					System.out.println("girdiginiz ay 29 gun");
+				}
+				else {
+					System.out.println("girdiginiz ay 28 gun");
+				}
+				
+				break;
+​
+		default:
+			System.out.println("agam boyle bir ay yok...");
+			break;
+		}
+    	
+​
+       
+    }
+}
+------------------------------------------------------------------------------------------------
+// Saati saniyeye, mil'i kilometreye, kilogrami gram'a
+        // ceviren bir method yaziniz.
+        Scanner scan = new Scanner(System.in);
+        System.out.print("cevirilecek birimi giriniz : ");
+        String birim = scan.next();
+        System.out.print("cevirilecek birimin degerini giriniz : ");
+        double miktar = scan.nextDouble();
+        cevirCan(birim, miktar);
+    }
+    private static void cevirCan(String brm, double mktr) {
+        switch (brm) {
+        case "saat":
+            System.out.println("girilen saatin saniye degeri :" + mktr * 60 * 60+" saniye");
+            break;
+        case "mil":
+            System.out.println("girilen milin kilometre degeri :" + mktr * 1.6+" km");
+            break;
+        case "kg":
+            System.out.println("girilen kg'nin gram degeri :" + mktr * 1000+" gram");
+            break;
+        default:
+            System.out.println("bu satte kafalar 1500 anca bu deger girilir");
+            
+        }
+    }
+}
+-----------------------------------------------------------------------------------------------------------
+public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        System.out.print("bir sayi giriniz : ");
+        
+        int num=scan.nextInt();
+        
+        addDigits(num);
+        
+        
+    }
+    private static int addDigits(int num) {
+        for (int i = 0; i < 5; i++) {
+            num=sum(num);
+        
+        if (num<10) 
+            break;
+        }
+        return sum(num);
+    }
+    private static int sum(int num) {
+        
+        int toplam =0;
+        int rakam =0;
+    
+        
+        while (num>0) {
+            
+            rakam = num%10;
+            toplam+=rakam;
+            num/=10;
+        }
+        System.out.println("Girdiginiz sayinin rakamlar toplami: "+toplam);
+            
+        
+        
+        return toplam;
+    }
+}
